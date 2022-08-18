@@ -20,6 +20,6 @@ torch::Tensor loadImage(std::string const &path, unsigned int size)
   torch::Deleter deleter = [](void *p) { stbi_image_free(p); };
   torch::TensorOptions options = torch::TensorOptions().dtype(torch::kUInt8);
   torch::Tensor t = torch::from_blob(data, {y, x, n}, deleter, options);
-  t = t.transpose(0, 2);
+  t = t.transpose(0, 2).transpose(1, 2);
   return t.to(torch::kFloat32) / 255;
 }

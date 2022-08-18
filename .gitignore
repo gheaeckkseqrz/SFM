@@ -1,4 +1,5 @@
 libtorch-shared-with-deps-latest.zip
+libtorch-macos-1.12.1.zip
 libtorch/
 *~
 build

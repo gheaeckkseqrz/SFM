@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 # set the project name
 project(SFM)
+set (CMAKE_CXX_STANDARD 17)
 
 # Find Torch
 set(CMAKE_PREFIX_PATH libtorch)
