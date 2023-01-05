@@ -9,6 +9,9 @@ set(CMAKE_PREFIX_PATH libtorch)
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
+# Find SFML
+find_package(SFML COMPONENTS graphics REQUIRED)
+
 include_directories(include)
 add_subdirectory(src)
 enable_testing()
